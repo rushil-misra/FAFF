@@ -83,7 +83,11 @@ Common action sequences:
   Your responses must be always JSON with the specified format.
 
  HumanMessage 
-Your ultimate task is: """open - https://myaadhaar.uidai.gov.in/genricDownloadAadhaar/en, enter aadhar number - 681993142042. after this the user will complete the process so leave browser open""". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.
+Your ultimate task is: """open new tab - https://myaadhaar.uidai.gov.in/genricDownloadAadhaar/en, enter aadhar number . after this the user will complete the process so leave browser open""". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.
+
+ HumanMessage 
+Here are placeholders for sensitive data: ['aadhar_number']
+To use them, write <secret>the placeholder name</secret>
 
  HumanMessage 
 Example output:
@@ -188,20 +192,20 @@ OTP for downloading eAadhaar will be received on registered mobile number. />
 	[21]<div >What supporting software needed to open e-Aadhaar? />
 	[22]<div >How can an Aadhaar Number holder download e-Aadhaar? />
 [End of page]
-Current step: 2/100Current date and time: 2025-05-26 18:43
+Current step: 2/100Current date and time: 2025-05-27 01:59
 
  RESPONSE
 {
   "current_state": {
-    "evaluation_previous_goal": "Success - The page loaded successfully with the required input fields visible.",
-    "memory": "Opened the specified URL and ready to enter the Aadhaar number. 0 out of 1 Aadhaar number entered.",
-    "next_goal": "Enter the Aadhaar number '681993142042' into the input field."
+    "evaluation_previous_goal": "Success - The page for downloading Aadhaar is open and ready for input.",
+    "memory": "Opened the Aadhaar download page. Next step is to enter the Aadhaar number. Current step 2/100.",
+    "next_goal": "Enter the Aadhaar number into the input field."
   },
   "action": [
     {
       "input_text": {
         "index": 13,
-        "text": "681993142042"
+        "text": "<secret>aadhar_number</secret>"
       }
     }
   ]

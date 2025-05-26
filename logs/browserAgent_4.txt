@@ -83,7 +83,11 @@ Common action sequences:
   Your responses must be always JSON with the specified format.
 
  HumanMessage 
-Your ultimate task is: """open - https://myaadhaar.uidai.gov.in/genricDownloadAadhaar/en, enter aadhar number - 681993142042. after this the user will complete the process so leave browser open""". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.
+Your ultimate task is: """open new tab - https://myaadhaar.uidai.gov.in/genricDownloadAadhaar/en, enter aadhar number . after this the user will complete the process so leave browser open""". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.
+
+ HumanMessage 
+Here are placeholders for sensitive data: ['aadhar_number']
+To use them, write <secret>the placeholder name</secret>
 
  HumanMessage 
 Example output:
@@ -113,7 +117,7 @@ Action result: 🔗  Opened new tab with https://myaadhaar.uidai.gov.in/genricDo
 
 
  HumanMessage 
-Action result: ⌨️  Input 681993142042 into index 13
+Action result: ⌨️  Input sensitive data into index 13
 
  HumanMessage 
 [Task history memory ends]
@@ -186,7 +190,7 @@ OTP for downloading eAadhaar will be received on registered mobile number. />
 	[11]<label >SID />
 		[12]<input type='radio' name='pvc' value='sid' />
 	*[13]*<label >Enter Aadhaar Number />
-	*[14]*<input name='uid' placeholder='0000 0000 0000' value='681993142042' />
+	*[14]*<input name='uid' placeholder='0000 0000 0000' value='<secret>aadhar_number</secret>' />
 	[15]<input name='captcha' placeholder='' value='' />
 	[16]<button type='button'>Send OTP />
 	[17]<div >What is e-Aadhaar? />
@@ -197,19 +201,19 @@ OTP for downloading eAadhaar will be received on registered mobile number. />
 	[22]<div >What supporting software needed to open e-Aadhaar? />
 	[23]<div >How can an Aadhaar Number holder download e-Aadhaar? />
 [End of page]
-Current step: 3/100Current date and time: 2025-05-26 18:43
+Current step: 3/100Current date and time: 2025-05-27 01:59
 
  RESPONSE
 {
   "current_state": {
     "evaluation_previous_goal": "Success - The Aadhaar number was successfully entered into the input field.",
-    "memory": "Aadhaar number '681993142042' entered successfully. Task completed as per instructions. 1 out of 1 steps completed.",
+    "memory": "Aadhaar number entered. Task to leave the browser open for the user to complete the process. Current step 3/100.",
     "next_goal": "Leave the browser open for the user to complete the process."
   },
   "action": [
     {
       "done": {
-        "text": "The Aadhaar number '681993142042' has been successfully entered. The browser is left open for the user to complete the process.",
+        "text": "The Aadhaar number has been entered successfully. The browser is left open for the user to complete the process.",
         "success": true
       }
     }

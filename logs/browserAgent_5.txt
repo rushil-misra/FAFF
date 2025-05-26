@@ -83,7 +83,7 @@ Common action sequences:
   Your responses must be always JSON with the specified format.
 
  HumanMessage 
-Your ultimate task is: """open - https://myaadhaar.uidai.gov.in/genricDownloadAadhaar/en, enter aadhar number - 681993142042. after this the user will complete the process so leave browser open""". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.
+Your ultimate task is: """open new tab - https://myaadhaar.uidai.gov.in/genricDownloadAadhaar/en, enter aadhar number - 681993142042. after this the user will complete the process so leave browser open""". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.
 
  HumanMessage 
 Example output:
@@ -144,33 +144,80 @@ English
 తెలుగు
 اردو
 eAadhaar Download
-Congratulations !!!
-Your Aadhaar Card has been Successfully Downloaded
-The Aadhaar letter PDF Password will be in 8 characters
-Combination of the first four letter of your name (as in Aadhaar) in CAPITAL letters and Year of Birth in YYYY format.
-Example : Your name is ANISH Y KUMAR Your Year of Birth is 1989
-Then your e-Aadhaar password is ANIS1989 />
+Select 12 digit Aadhaar Number /16 digit Virtual ID (VID) Number / 28 digit Enrolment ID (EID) Number / 28 digit Service ID (SID) Number.
+Enter Captcha
+Frequently Asked Questions
+e-Aadhaar is a password protected electronic copy of Aadhaar, digitally signed by UIDAI.
+As per Aadhaar Act, e-Aadhaar is equally valid like Physical Copy of Aadhaar for all purposes. For validity of eAadhaar, please visit UIDAI circular-
+https://uidai.gov.in/images/ uidai_om_on_e_aadhaar_validity.pdf
+Masked Aadhaar implies replacing of first 8 digits of Aadhaar number with “xxxx-xxxx” while only last 4 digits of the Aadhaar Number are visible.
+Please visit Aadhaar YouTube Channel and watch tutorial link on
+https://youtu.be/aVNfUNIccZs?si=ByW1O6BIPMwc0seL
+Password of eAadhaar is a combination of the first 4 letters of name in CAPITAL and the year of birth (YYYY).
+For Example:
+Example 1
+Name: SURESH KUMAR
+Year of Birth: 1990
+Password: SURE1990
+Example 2
+Name: SAI KUMAR
+Year of Birth: 1990
+Password: SAIK1990
+Example 3
+Name: P. KUMAR
+Year of Birth: 1990
+Password: P.KU1990
+Example 4
+Name: RIA
+Year of Birth: 1990
+Password: RIA1990
+Resident needs 'Adobe Reader' to view e-Aadhaar. You have 'Adobe Reader' installed in your System. To install Adobe Reader in the System
+visit
+https://get.adobe.com/reader/
+An Aadhaar Number holder can download e-Aadhaar by following three ways.
+By Using Enrolment Number:
+By Using Aadhaar No:
+By using VID:
+OTP for downloading eAadhaar will be received on registered mobile number. />
 	[1]<img  />
 	[2]<span >myAadhaar />
 	[3]<div >English />
 	[4]<a >Dashboard />
-	*[5]*<button type='button'>Go to Dashboard />
+	[5]<label >Aadhaar Number />
+		[6]<input type='radio' name='pvc' value='uid' />
+	[7]<label >Enrolment ID Number />
+		[8]<input type='radio' name='pvc' value='eid' />
+	[9]<label >Virtual ID Number />
+		[10]<input type='radio' name='pvc' value='vid' />
+	[11]<label >SID />
+		[12]<input type='radio' name='pvc' value='sid' />
+	[13]<label >Enter Aadhaar Number />
+	[14]<input name='uid' placeholder='0000 0000 0000' value='681993142042' />
+	[15]<input name='captcha' placeholder='' value='' />
+	[16]<button type='button'>Send OTP />
+	[17]<div >What is e-Aadhaar? />
+	[18]<div >Is e-Aadhaar equally valid like physical copy of Aadhaar? />
+	[19]<div >What is Masked Aadhaar? />
+	[20]<div >How to validate digital signatures in e-Aadhaar? />
+	[21]<div >What Is the Password of e-Aadhaar? />
+	[22]<div >What supporting software needed to open e-Aadhaar? />
+	[23]<div >How can an Aadhaar Number holder download e-Aadhaar? />
 [End of page]
-Current step: 1/100Current date and time: 2025-05-26 18:44
+Current step: 1/100Current date and time: 2025-05-27 01:02
 
-Action result 1/1: The Aadhaar number '681993142042' has been successfully entered. The browser is left open for the user to complete the process.
+Action result 1/1: The Aadhaar number '681993142042' has been entered successfully. The browser is left open for the user to complete the process.
 
  RESPONSE
 {
   "current_state": {
-    "evaluation_previous_goal": "Success - The Aadhaar number was successfully entered and the page indicates the Aadhaar card has been downloaded.",
-    "memory": "Aadhaar number '681993142042' entered successfully. Task completed as per instructions. 1 out of 1 steps completed.",
+    "evaluation_previous_goal": "Success - The Aadhaar number was successfully entered into the input field.",
+    "memory": "Aadhaar number entered. The user will complete the process from here.",
     "next_goal": "Leave the browser open for the user to complete the process."
   },
   "action": [
     {
       "done": {
-        "text": "The Aadhaar number '681993142042' has been successfully entered. The browser is left open for the user to complete the process.",
+        "text": "The Aadhaar number '681993142042' has been entered successfully. The browser is left open for the user to complete the process.",
         "success": true
       }
     }

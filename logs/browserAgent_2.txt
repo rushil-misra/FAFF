@@ -83,7 +83,11 @@ Common action sequences:
   Your responses must be always JSON with the specified format.
 
  HumanMessage 
-Your ultimate task is: """open - https://myaadhaar.uidai.gov.in/genricDownloadAadhaar/en, enter aadhar number - 681993142042. after this the user will complete the process so leave browser open""". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.
+Your ultimate task is: """open new tab - https://myaadhaar.uidai.gov.in/genricDownloadAadhaar/en, enter aadhar number . after this the user will complete the process so leave browser open""". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.
+
+ HumanMessage 
+Here are placeholders for sensitive data: ['aadhar_number']
+To use them, write <secret>the placeholder name</secret>
 
  HumanMessage 
 Example output:
@@ -106,14 +110,14 @@ Available tabs:
 [TabInfo(page_id=0, url='about:blank', title='Setting up...', parent_page_id=None)]
 Interactive elements from top layer of the current page inside the viewport:
 empty page
-Current step: 1/100Current date and time: 2025-05-26 18:43
+Current step: 1/100Current date and time: 2025-05-27 01:59
 
  RESPONSE
 {
   "current_state": {
-    "evaluation_previous_goal": "Unknown - The page is currently blank, so no previous actions have been evaluated.",
-    "memory": "Starting task to open the specified URL and enter the Aadhaar number. 0 out of 1 steps completed.",
-    "next_goal": "Open the URL 'https://myaadhaar.uidai.gov.in/genricDownloadAadhaar/en' in a new tab."
+    "evaluation_previous_goal": "Unknown - The page is currently blank, so no previous actions can be evaluated.",
+    "memory": "Starting task to open a new tab and navigate to the Aadhaar download page. Current step 1/100.",
+    "next_goal": "Open a new tab and navigate to the URL 'https://myaadhaar.uidai.gov.in/genricDownloadAadhaar/en'."
   },
   "action": [
     {

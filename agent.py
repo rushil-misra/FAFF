@@ -11,7 +11,7 @@ controller = Controller()
 # firstName = str(input('give your first name -- '))
 # yob = str(input('give your year of birth (eg - 2004) -- '))
 
-aadhar_number = 681993142042
+aadhar_number = 000
 
 os.environ["OPENAI_API_KEY"] = os.getenv('OPENAI_API_KEY')
 llm = ChatOpenAI(model="gpt-4o", temperature=0)

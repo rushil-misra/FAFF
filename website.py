@@ -15,7 +15,7 @@ time.sleep(5)
 
 
 aadhar_number = driver.find_element(By.NAME,"uid")
-aadhar_number.send_keys('681993142042')
+aadhar_number.send_keys('')
 
 First_name = 'rushil'
 yob = '2004'

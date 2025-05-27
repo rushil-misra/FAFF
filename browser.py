@@ -16,7 +16,7 @@ sensitive_data = {'aadhar_number' : aadhar_number}
 os.environ["OPENAI_API_KEY"] = os.getenv('OPENAI_API_KEY')
 llm = ChatOpenAI(model="gpt-4o", temperature=0)
 
-Browser_Session = BrowserSession(keep_alive = True,browser_profile=BrowserProfile(accept_downloads=True,downloads_path= 'downloads',keep_alive=0))
+Browser_Session = BrowserSession(executable_path = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',keep_alive = True,browser_profile=BrowserProfile(accept_downloads=True,downloads_path= 'downloads',keep_alive=0))
 
 
 async def main():

@@ -201,19 +201,19 @@ OTP for downloading eAadhaar will be received on registered mobile number. />
 	[22]<div >What supporting software needed to open e-Aadhaar? />
 	[23]<div >How can an Aadhaar Number holder download e-Aadhaar? />
 [End of page]
-Current step: 3/100Current date and time: 2025-05-27 01:59
+Current step: 3/100Current date and time: 2025-05-27 19:02
 
  RESPONSE
 {
   "current_state": {
-    "evaluation_previous_goal": "Success - The Aadhaar number was successfully entered into the input field.",
-    "memory": "Aadhaar number entered. Task to leave the browser open for the user to complete the process. Current step 3/100.",
+    "evaluation_previous_goal": "Success - The Aadhaar number was entered successfully.",
+    "memory": "Aadhaar number entered. Task to open the page and input the number is complete. 1 out of 1 entries completed.",
     "next_goal": "Leave the browser open for the user to complete the process."
   },
   "action": [
     {
       "done": {
-        "text": "The Aadhaar number has been entered successfully. The browser is left open for the user to complete the process.",
+        "text": "The Aadhaar number has been successfully entered on the page. The browser is left open for the user to complete the process.",
         "success": true
       }
     }
